@@ -1,5 +1,6 @@
 import numpy as np
 
+# returns the row with the lowset sum in "mat"
 def min_row(mat):
 	min_row = mat[0]
 	#print("first row sum: " + str(min_row.sum()))

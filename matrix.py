@@ -1,8 +1,14 @@
+# Author: Timothy Lu
+# 8/29/2017
+# 
+# Run this to find the lowest determinant of paired rows in matrices
+
 import sys
 import numpy as np
 from random import randint
 import minimum
 
+# reads in a .txt file as a numpy matrix
 def read_matrix_file(filename):
     matrix = []
     print("reading...")
@@ -25,6 +31,7 @@ def read_matrix_file(filename):
     	print("ERROR: could not find " + filename)
     	sys.exit
 
+# Returns a matrix with "num" number of rows picked randomly from "matrix"
 def rand_rows(num, matrix):
     print("randomizing...")
     rows = set()
@@ -43,6 +50,7 @@ def rand_rows(num, matrix):
     print()
     return return_mat
 
+# Generates a paired matrix (adds every row in "matrix" with every other row)
 def generate_paired_matrix(matrix):
     print("generating paired matrix...")
     temp = []
